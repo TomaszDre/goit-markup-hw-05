@@ -12,6 +12,7 @@
     --footer-text-color: rgba(255, 255, 255, 0.6);
     --line-color: #ececec;
     --main-font: "Roboto", sans-serif;
+    --background-color-thumb: #2f303acc;
 }
 
 section {
@@ -693,3 +694,63 @@ icon-group3
 icon-group4
 icon-group5
  */
+
+ /* Homework 5 */
+
+ /* what we do */
+
+ .thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.label {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 27px 0px 27px 90px;
+    border-bottom-left-radius: 4px;
+    background: var(--background-color-thumb);
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--brand-color-white);
+    font-size: 14px;
+  }
+
+.label1 {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 27px 0px 27px 113px;
+    border-bottom-left-radius: 4px;
+    background: var(--background-color-thumb);
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--brand-color-white);
+    font-size: 14px;
+  }
+
+  .label2 {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 27px 0px 27px 94px;
+    border-bottom-left-radius: 4px;
+    background: var(--background-color-thumb);
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--brand-color-white);
+    font-size: 14px;
+  }
