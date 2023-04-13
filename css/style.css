@@ -373,7 +373,6 @@ letter-spacing: 0.03em;
     text-align: center;
     line-height: 1;
     margin-bottom: 50px;
-    
 }
 
 .our-team-background {
@@ -695,11 +694,11 @@ icon-group4
 icon-group5
  */
 
- /* Homework 5 */
+/* Homework 5 */
 
- /* what we do */
+/* what we do */
 
- .thumb {
+.thumb {
     position: relative;
     overflow: hidden;
 }
@@ -719,7 +718,7 @@ icon-group5
     text-transform: uppercase;
     color: var(--brand-color-white);
     font-size: 14px;
-  }
+}
 
 .label1 {
     position: absolute;
@@ -736,9 +735,9 @@ icon-group5
     text-transform: uppercase;
     color: var(--brand-color-white);
     font-size: 14px;
-  }
+}
 
-  .label2 {
+.label2 {
     position: absolute;
     right: 0;
     left: 0;
@@ -753,4 +752,30 @@ icon-group5
     text-transform: uppercase;
     color: var(--brand-color-white);
     font-size: 14px;
-  }
+}
+
+/* .nav-box::after {
+    background-color: var(--brand-color-primary);
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+}
+
+.hover {
+    color: var(--brand-color-secondary);
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover:hover,
+.hover:focus {
+    color: var(--brand-color-primary);
+    transform: scale(1.1);
+}
+
+.hover a:hover,
+.hover a:focus {
+    color: var(--brand-color-primary);
+    transform: scale(1.1);
+} */
