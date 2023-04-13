@@ -373,6 +373,7 @@ letter-spacing: 0.03em;
     text-align: center;
     line-height: 1;
     margin-bottom: 50px;
+    
 }
 
 .our-team-background {
@@ -397,7 +398,6 @@ letter-spacing: 0.03em;
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     margin: 0;
-    margin-bottom: 94px;
     padding: 0px;
 }
 
