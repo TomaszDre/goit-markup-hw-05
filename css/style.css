@@ -696,6 +696,23 @@ icon-group5
 
 /* Homework 5 */
 
+/* Header */
+
+.active {
+   position: relative; 
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    background: var(--brand-color-primary);
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    margin-top: 28px;
+    display: block;
+}
+
 /* what we do */
 
 .thumb {
@@ -795,13 +812,14 @@ transition: transform 250ms ease;
 } */
 
 /* .nav-box::after {
+    content: "";
     background-color: var(--brand-color-primary);
     height: 4px;
     display: block;
     border-radius: 2px;
-}
+} */
 
-.hover {
+/* .hover {
     color: var(--brand-color-secondary);
     transition-property: color, transform;
     transition-duration: 250ms;
