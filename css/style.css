@@ -13,6 +13,8 @@
     --line-color: #ececec;
     --main-font: "Roboto", sans-serif;
     --background-color-thumb: #2f303acc;
+    --backdrop-color: rgba(0, 0, 0, 0.2);
+    --button-modal: rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -65,6 +67,7 @@ header {
 
 header:hover {
     color: var(--brand-color-primary);
+    
 }
 
 footer {
@@ -74,6 +77,7 @@ footer {
 
 footer:hover {
     color: var(--brand-color-primary);
+    
 }
 
 /* svg {
@@ -95,6 +99,9 @@ button:focus {
     cursor: pointer;
     color: var(--brand-color-white);
     background-color: var(--brand-color-primary);
+    transform: scale(1.1);
+    
+    
 }
 
 p {
@@ -152,6 +159,7 @@ a:hover,
 a:focus {
     color: #2196f3;
     fill: currentColor;
+    
 }
 
 .button {
@@ -243,6 +251,7 @@ a:focus {
 .contact-set:hover,
 .contact-set:focus {
     --paragraf-text-color: var(--brand-color-primary);
+    transform: scale(1.1);
 }
 
 /* ZAMÓW USŁUGĘ */
@@ -454,6 +463,7 @@ letter-spacing: 0.03em;
 .header-border:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
+        transform: scale(1.05);
 }
 
 .p {
@@ -569,6 +579,7 @@ letter-spacing: 0.03em;
     background-color: var(--brand-color-primary);
     --background-icon-color: var(--brand-color-white);
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .job-text {
@@ -612,6 +623,7 @@ letter-spacing: 0.03em;
 .clients-list-item:focus {
     border-color: var(--brand-color-primary);
     --background-icon-color: var(--brand-color-primary);
+    transform: scale(1.05);
 }
 
 /* .client-link {
@@ -634,6 +646,7 @@ letter-spacing: 0.03em;
 .client-icon:hover,
 .client-icon:focus {
     fill: var(--brand-color-primary);
+    transform: scale(1.05);
 }
 
 /* .client-link:is(:hover, :focus) {
@@ -672,6 +685,7 @@ letter-spacing: 0.03em;
     background-color: var(--brand-color-primary);
     --background-icon-color: var(--brand-color-white);
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 /* icons list
@@ -711,6 +725,52 @@ icon-group5
     height: 4px;
     margin-top: 28px;
     display: block;
+}
+
+/* Modal */
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--backdrop-color);
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background-color: var(--brand-color-white);
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: block;
+    top: 8px;
+    right: 8px;
+    border: var(--button-modal);
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* what we do */
@@ -784,23 +844,30 @@ overflow: hidden;
 
 .overlay {
 position: absolute;
-top: 0;
-left: 0;
 width: 100%;
 height: 100%;
+opacity: 0.9;
+top: 0;
+left: 0;
+
 background-color: var(--brand-color-primary);
-transform: translatey(-100%);
-transition: transform 250ms ease;
+transform: translateY(100%);
+transition-duration:  250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box:hover .overlay {
-    transform: translatex(0);
+    transform: translateX(0);
+    
 }
 
-.overlay p {
+.overlay > p {
     color: var(--brand-color-white);
     padding: 49px 45px 49px 24px;
     font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    font-weight: 400;
 }
 
 /* .overlay code {
