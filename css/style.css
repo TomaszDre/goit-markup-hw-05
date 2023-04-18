@@ -67,7 +67,6 @@ header {
 
 header:hover {
     color: var(--brand-color-primary);
-    
 }
 
 footer {
@@ -77,7 +76,6 @@ footer {
 
 footer:hover {
     color: var(--brand-color-primary);
-    
 }
 
 /* svg {
@@ -100,8 +98,6 @@ button:focus {
     color: var(--brand-color-white);
     background-color: var(--brand-color-primary);
     transform: scale(1.1);
-    
-    
 }
 
 p {
@@ -159,7 +155,6 @@ a:hover,
 a:focus {
     color: #2196f3;
     fill: currentColor;
-    
 }
 
 .button {
@@ -255,7 +250,7 @@ a:focus {
     transition-property: color, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
 .contact-set:hover,
 .contact-set:focus {
@@ -463,9 +458,8 @@ letter-spacing: 0.03em;
 .button-portfolio:hover,
 .button-portfolio:focus {
     transform: scale(1.05);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-    0px 1px 2px rgba(0, 0, 0, 0.08), 
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .wrap {
@@ -484,10 +478,9 @@ letter-spacing: 0.03em;
 
 .header-border:hover,
 .header-border:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-        0px 4px 4px rgba(0, 0, 0, 0.06),
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
-        transform: scale(1.01);
+    transform: scale(1.01);
 }
 
 .p {
@@ -746,7 +739,7 @@ icon-group5
 /* Header */
 
 .active {
-   position: relative; 
+    position: relative;
 }
 
 .active::after {
@@ -779,16 +772,22 @@ icon-group5
     pointer-events: none;
 }
 
+.is-hidden .modal {
+    transform: scale(0);
+}
+
 .backdrop {
     position: fixed;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: var(--backdrop-color);
     visibility: visible;
-    opacity: 1;
-    z-index: 100;
+    /* opacity: 1; */
+    /* z-index: 100; */
     transition-property: opacity, visibility, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -802,7 +801,9 @@ icon-group5
     top: 50%;
     left: 50%;
     border-radius: 4px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%), scale(1);
+    transition: transform 0.6s ease-in;
+    
 }
 
 .close {
@@ -904,30 +905,29 @@ icon-group5
 /* Portfolio */
 
 .box {
-position: relative;
-width: 370px;
-height: 294px;
-margin: 0 auto;
-background-color: var(--brand-color-primary);
-overflow: hidden;
+    position: relative;
+    width: 370px;
+    height: 294px;
+    margin: 0 auto;
+    background-color: var(--brand-color-primary);
+    overflow: hidden;
 }
 
 .overlay {
-position: absolute;
-width: 100%;
-height: 100%;
-opacity: 0.9;
-top: 0;
-left: 0;
-background-color: var(--brand-color-primary);
-transform: translateY(100%);
-transition-duration:  250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    background-color: var(--brand-color-primary);
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box:hover .overlay {
     transform: translateX(0);
-    
 }
 
 .overlay > p {
@@ -959,15 +959,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .card-transition:hover,
 .card-transition:focus {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 
-    0 4px 4px 0 rgba(0, 0, 0, 0.06),
-    1px 4px 6px 0 rgba(0, 0, 0, 0.16), 
-    0 2px 2px 1px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transform: scale(1.01);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+        1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 2px 2px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transform: scale(1.01);
 }
-
-
 
 /* .overlay code {
     display: inline-block;
