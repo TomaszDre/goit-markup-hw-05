@@ -801,7 +801,7 @@ icon-group5
     top: 50%;
     left: 50%;
     border-radius: 4px;
-    transform: translate(-50%, -50%), scale(1);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 0.6s ease-in;
     
 }
